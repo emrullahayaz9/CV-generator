@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accept Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .custom-form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .custom-form-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .custom-form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+
+        .custom-form-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container custom-form-container">
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label custom-form-label">Name:</label>
+                    {{ form.name }}
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label custom-form-label">Email:</label>
+                    {{ form.email }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="phone" class="form-label custom-form-label">Phone:</label>
+                    {{ form.phone }}
+                </div>
+                <div class="col-md-6">
+                    <label for="summary" class="form-label custom-form-label">Summary:</label>
+                    {{ form.summary }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="degree" class="form-label custom-form-label">Degree:</label>
+                    {{ form.degree }}
+                </div>
+                <div class="col-md-6">
+                    <label for="school" class="form-label custom-form-label">School:</label>
+                    {{ form.school }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="university" class="form-label custom-form-label">University:</label>
+                    {{ form.university }}
+                </div>
+                <div class="col-md-6">
+                    <label for="previous_work" class="form-label custom-form-label">Previous Work:</label>
+                    {{ form.previous_work }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label for="skills" class="form-label custom-form-label">Skills:</label>
+                    {{ form.skills }}
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary custom-form-button">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gzjwFz/BV3tGfP4Ig7ik2b/JD2Pb4KYiFA7E+haHR2fB6oqkpw6k+1oZr2H3h2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
