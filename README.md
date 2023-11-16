@@ -1,2 +1,2 @@
 # CV-generator
-this is a cv generator web application designed by using django.
+I created a web based cv-generator application using django, io, pdfkit, loader, html, css libraries. You can download the project at any time, create a trial CV and save it on your computer in PDF format.
